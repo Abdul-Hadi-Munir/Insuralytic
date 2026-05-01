@@ -122,12 +122,14 @@ def show(df):
     | Variance | $s^2 = \dfrac{1}{n-1}\displaystyle\sum_{i=1}^{n}(x_i - \bar{x})^2$ |
     | Standard Deviation | $s = \sqrt{s^2}$ |
     | IQR | $Q_3 - Q_1$ |
-    | Skewness | $\gamma_1 = \dfrac{1}{n}\displaystyle\sum_{i=1}^{n}\!\left(\dfrac{x_i - \bar{x}}{s}\right)^{\!3}$ |
-
-    **Interpretation of skewness:** A value of 0 indicates perfect symmetry.
-    Values > 0 indicate a right (positive) skew — a long upper tail.
-    Charges exhibit a skewness of **{:.2f}**, confirming a pronounced right tail.
-    """.format(df["charges"].skew()))
+    | Skewness | $\gamma_1 = \dfrac{1}{n}\displaystyle\sum_{i=1}^{n}\left(\dfrac{x_i - \bar{x}}{s}\right)^{3}$ |
+    """)
+    skew_val = df["charges"].skew()
+    st.markdown(
+        "**Interpretation of skewness:** A value of 0 indicates perfect symmetry. "
+        "Values > 0 indicate a right (positive) skew — a long upper tail. "
+        f"Charges exhibit a skewness of **{skew_val:.2f}**, confirming a pronounced right tail."
+    )
 
     # visual: four boxplots side by side
     fig, axes = plt.subplots(1, 4, figsize=(16, 5))
