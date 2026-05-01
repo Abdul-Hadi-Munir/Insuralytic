@@ -3,6 +3,11 @@
 A machine learning web application built with Python and Streamlit that predicts healthcare insurance costs based on personal and lifestyle attributes. The model uses Linear Regression trained on the Medical Cost Personal Dataset to estimate annual insurance charges.
 
 ---
+## Live Web
+
+https://insuralytic-9isukngh8usqlklhd877fw.streamlit.app/
+
+---
 
 ## Table of Contents
 
@@ -241,25 +246,6 @@ Categorical features are encoded to numeric values before being passed to the mo
 | Data Processing | pandas, numpy      |
 | HTTP Requests   | requests           |
 | Serialization   | pickle             |
-
----
-
-## Deployment
-
-### Streamlit Community Cloud
-
-1. Push the project to GitHub (already done)
-2. Go to [share.streamlit.io](https://share.streamlit.io)
-3. Connect your GitHub account
-4. Select the repository: `Abdul-Hadi-Munir/Insuralytic`
-5. Set the main file path to `app.py`
-6. Click Deploy
-
-### Local Deployment
-
-```bash
-streamlit run app.py --server.port 8501 --server.address 0.0.0.0
-```
 
 ---
 
