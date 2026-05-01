@@ -2,5 +2,8 @@ streamlit
 scikit-learn
 numpy
 pandas
+matplotlib
+seaborn
+scipy
 streamlit-lottie
 requests
